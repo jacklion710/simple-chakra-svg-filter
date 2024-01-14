@@ -1,4 +1,3 @@
-// components/SVGFilter.tsx
 import React from 'react';
 import { Image } from '@chakra-ui/react';
 
