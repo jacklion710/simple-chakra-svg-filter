@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Simple SVG Filter Component README
 
-## Getting Started
+## Project Title
+Simple SVG Filter Component
 
-First, run the development server:
+## Introduction
+This project provides a simple yet powerful React component for applying SVG filters to images. Developed using Next.js, Chakra UI, and TypeScript, it allows for easy integration and customization of SVG filters in web applications.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Features](#features)
+5. [Dependencies](#dependencies)
+6. [Configuration](#configuration)
+7. [Examples](#examples)
+8. [Troubleshooting](#troubleshooting)
+9. [Contributors](#contributors)
+10. [License](#license)
+
+## Installation
+To use this component in your project, follow these steps:
+
+1. Ensure you have a React project setup with Next.js and Chakra UI.
+2. Clone this repository or copy the files directly into your project.
+3. Import the component where needed.
+
+## Usage
+Import and use the `SVGFilter` component or the `applySvgFilter` function in your React components to apply color filters to SVG images. Specify a path to a vector file `/path-to-image.svg`, allocate a unique ID `filterId` and provide a hex value for color `#hexcolor`. You can also apply any standard chakra prop.
+
+```jsx
+import { applySvgFilter } from 'path-to-SVGFilter';
+
+// In your component
+applySvgFilter('/path-to-image.svg', 'filterId', '#hexcolor', { /* other props */ });
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
+- Simple and easy to integrate SVG filter component.
+- Customizable filter color and additional props.
+- Compatibility with Next.js and Chakra UI for modern web development.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Dependencies
+- Next.js
+- Chakra UI
+- TypeScript
+- React
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Configuration
+Next JS and Chakra UI should be configured. I have not tested it in Vue, Angular, etc... But it could work anywherere with a little extra effort. 
 
-## Learn More
+## Examples
+The `Page.tsx` provides examples of how to use the `applySvgFilter` function to apply different color filters to SVG images.
 
-To learn more about Next.js, take a look at the following resources:
+## Troubleshooting
+For any issues, first ensure that all dependencies are properly installed. Check if the SVG paths and filter IDs are correctly specified.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributors
+This project was developed solely by myself, Jacob Leone.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## License
+Specify the license under which this project is available (e.g., MIT, GPL-3.0, etc.).
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This README provides a basic overview. For further customization and details, refer to the component source code.
