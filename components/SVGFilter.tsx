@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from '@chakra-ui/react';
+import { Image, ChakraProvider } from '@chakra-ui/react';
 
 interface SVGFilterProps {
   src: string;
@@ -10,7 +10,7 @@ interface SVGFilterProps {
 
 const SVGFilter: React.FC<SVGFilterProps> = ({ src, filterId, color, ...rest }) => {
   return (
-    <>
+    <ChakraProvider>
       <svg width="0" height="0">
         <filter id={filterId}>
           <feFlood floodColor={color} result="flood" />
@@ -18,7 +18,7 @@ const SVGFilter: React.FC<SVGFilterProps> = ({ src, filterId, color, ...rest }) 
         </filter>
       </svg>
       <Image src={src} style={{ filter: `url(#${filterId})` }} {...rest} />
-    </>
+    </ChakraProvider>
   );
 };
 
